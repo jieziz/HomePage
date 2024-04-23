@@ -28,6 +28,20 @@ npm install
 npm run dev
 ```
 
+## 修复
+
+```sh
+1. 安装cnpm
+npm install -g cnpm --registry=https://registry.npm.taobao.org
+2. 把package.json中的node-sass和gulp-sass删掉
+cnpm install node-sass --save-dev
+cnpm install gulp-sass --save-dev
+3. 再把其他的装好
+cnpm install
+4. 装sass
+cnpm install sass --save-dev
+
+```
 
 
 ## 功能特性

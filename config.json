@@ -32,12 +32,12 @@
 				"text": "About"
 			},
 			"third": {
-				"href": "mailto:simon@tomotoes.com",
+				"href": "",
 				"icon": "email",
-				"text": "Email"
+				"text": "探针"
 			},
 			"fourth": {
-				"href": "https://github.com/tomotoes",
+				"href": "",
 				"icon": "github",
 				"text": "Github"
 			}
