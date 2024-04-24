@@ -1,18 +1,18 @@
 {
 	"head": {
-		"title": "戒子",
+		"title": "Jez",
 		"description": "Author:Jez,Category:Personal Blog",
 		"favicon": "favicon.ico"
 	},
 	"intro": {
-		"title": "戒子",
+		"title": "Jez",
 		"subtitle": "Front back left right end engineer",
 		"enter": "enter",
 		"supportAuthor": false,
 		"background": true
 	},
 	"main": {
-		"name": "戒子",
+		"name": "Jez",
 		"signature": "Code & Input & Output",
 		"backgroundImageUrl": "",
 		"avatar": {
@@ -23,23 +23,28 @@
 		"ul": {
 			"first": {
 				"href": "blog/",
-				"icon": "bokeyuan",
+				"icon": "blog",
 				"text": "Blog"
 			},
 			"second": {
 				"href": "about/",
-				"icon": "xiaolian",
+				"icon": "about",
 				"text": "About"
 			},
 			"third": {
 				"href": "https://tz.softjez.uk",
-				"icon": "email",
+				"icon": "tanzhen",
 				"text": "Monitor"
 			},
 			"fourth": {
-				"href": "",
+				"href": "https://github.com/jieziz",
 				"icon": "github",
 				"text": "Github"
+			},
+			"five": {
+				"href": "https://gitee.com/jiezzz",
+				"icon": "gitee",
+				"text": "gitee"
 			}
 		}
 	}
