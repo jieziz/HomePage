@@ -32,4 +32,5 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}  # 服务器密码
           port: 22  # SSH 端口
           source: "dist/*"  # 需要上传的文件
-          target: "/opt/1panel/apps/openresty/openresty/www/sites/jesz.org"  # 服务器目标路径
+          target: "/opt/1panel/apps/openresty/openresty/www/sites/jesz.org/index"  # 服务器目标路径
+          strip_components: 1  # 去掉目标路径中的第一层（即 dist 文件夹）
