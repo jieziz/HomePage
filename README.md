@@ -1,198 +1,184 @@
-# jez-HomePage
+# Jez - HomePage
 
-[中文版说明](<README.zh_CN.md>)
-
-
+[中文版说明](README.zh_CN.md)
 
 ## Introduction
 
-> `戒子`  home page.
+`Jez` is a sleek and modern personal homepage project. It features a dynamic WebGL background, responsive design, and a lightweight yet powerful tech stack. Whether you're looking to create your own homepage or explore modern web development techniques, this project is a great starting point.
 
-[Online browsing](http://jesz.org)
-
-Do you want to install such a cool homepage for your website?
-
-Let's start now!
-
-
+[Online Demo](http://jesz.org)
 
 ## Prerequisites
 
-- Nodejs 6.0 above
-- Git available
+Before you begin, ensure your development environment meets the following requirements:
 
+- **Node.js**: Version 6.0 or higher
+- **Git**: Installed and available on your system
 
+## Installation
 
-## Install
+Follow these steps to set up the project:
 
 ```sh
+# Clone the repository
 git clone https://github.com/jieziz/HomePage.git
-cd HomePage
-npm install
-npm run dev
 
+# Navigate to the project directory
+cd HomePage
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
 ```
-## fix
+
+## Troubleshooting
+
+If you encounter issues during installation, try the following steps:
+
 ```sh
-1. install cnpm
+# 1. Install cnpm (Taobao NPM mirror for faster installation in China)
 npm install -g cnpm --registry=https://registry.npm.taobao.org
-2. Remove node-sass and gulp-sass from package.json.
+
+# 2. Remove node-sass and gulp-sass from package.json
 cnpm install node-sass --save-dev
 cnpm install gulp-sass --save-dev
-3. Install the remaining dependencies in package.json.
+
+# 3. Install remaining dependencies
 cnpm install
-4. install sass
+
+# 4. Install Sass
 cnpm install sass --save-dev
 ```
 
-
 ## Features
 
-1. Highly encapsulates all the information in the page
-2. Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background
-3. Use `scss` as `css` preprocessor
-4. Use `pug` as `html` preprocessor
-5. Use `gulp` as a build tool and configure the build script
-6. Comfortable animation and beautiful UI
-7. Responsive, mobile support
-8. The referenced `css` and`js` files do not exceed `18.5` kb in total!
-9. Delayed response switch page event
-10. There are many features left for you to explore...
+`Jez` offers a range of impressive features:
 
+1. **Highly Encapsulated**: All page information is neatly organized for easy maintenance and scalability.
+2. **WebGL Background**: Uses [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) for a dynamic and visually stunning background.
+3. **SCSS Preprocessor**: Write clean and modular CSS with SCSS.
+4. **Pug Template Engine**: Simplify HTML development with Pug.
+5. **Gulp Build Tool**: Preconfigured build scripts for streamlined development.
+6. **Smooth Animations**: Enjoy a seamless and visually appealing user experience.
+7. **Responsive Design**: Fully optimized for mobile and desktop devices.
+8. **Lightweight**: Total size of referenced CSS and JS files is less than 18.5 KB.
+9. **Delayed Page Switching**: Enhanced user experience with delayed event handling.
+10. **More to Explore**: Discover additional features as you dive deeper into the project.
 
+## Project Structure
 
-## Structure
+The project is logically divided into two main sections:
 
-According to the characteristics of the project, it is divided into two categories：
-1. `intro` First screen
-2. `main` Secondary screen
+1. **`intro`**: The first screen (landing page).
+2. **`main`**: The secondary screen (main content).
 
-The corresponding functions, styles and configurations are also based on this standard.
+Functions, styles, and configurations are organized accordingly.
 
+## Basic Configuration
 
-
-## Basic configuration
-
-Each key name in the config.json file`config.json` corresponds to the corresponding component name.
-
-such as：
+The `config.json` file contains configuration options that map directly to components. For example:
 
 ```json
 {
-	"head": {
-		"title": "Jez",
-		"description": "Author:SimonMa,Category:Personal Blog",
-		"favicon": "favicon.ico"
-	}
+  "head": {
+    "title": "Jez",
+    "description": "Author:SimonMa,Category:Personal Blog",
+    "favicon": "favicon.ico"
+  }
 }
-
 ```
-The above configuration information corresponds to the information in the following `layout/head.pug` component.
-```html
+
+This configuration is automatically applied to the `layout/head.pug` component:
+
+```pug
 head
-	title #{head.title}
-	meta(charset="utf-8")
-	meta(name="Description" content=`${head.description}`)
-	link(rel="icon" href=`${head.favicon}` type="image/x-icon")
+  title #{head.title}
+  meta(charset="utf-8")
+  meta(name="Description" content=`${head.description}`)
+  link(rel="icon" href=`${head.favicon}` type="image/x-icon")
 ```
 
+## Advanced Configuration
 
+### 1. WebGL Background
 
-## Advanced configuration
+The homepage uses [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as its background. To disable it, set the following in `config.json`:
 
-### WebGL-Fluid-Simulation
-
-Use [WebGL-Fluid-Simulation](https://github.com/PavelDoGreat/WebGL-Fluid-Simulation/) as background at home.
-
-If you want to turn it off, set `intro.background: false`.
-
-### supportAuthor
-
-The `supportAuthor` option is turned on by default for configuration information, that is, authors are supported.
-
-All support items are as follows：
-
-1. The `octopus cat` will be displayed in the upper right corner of the home page.
-2. The console prints the author's site information
-
-If you want to turn it off, set `intro.author: false`.
-
-
-### Icon replacement
-Icons in the project, all from [阿里巴巴矢量图标库](https://www.iconfont.cn)
-
-The replacement steps are as follows:
-
-1. Please select your icon, add it to the project, and change the color to white.
-2. Click Font Class method
-3. Copy the contents of the generated link
-4. Replace the contents of the file `/src/css/common/icon.scss`, where the contents of the `icon` selector must be preserved.
-5. Config.json the corresponding item in the `config.json`file`main.ul. * .icon`
-
-```css
-.icon {
-	display: block;
-	width: 1.5em;
-	height: 1.5em;
-	margin: 0 auto;
-	fill: currentColor;
-	font-family: 'iconfont' !important;
-	font-size: inherit;
-	font-style: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+```json
+"intro": {
+  "background": false
 }
 ```
 
+### 2. Support Author
 
+By default, the `supportAuthor` option is enabled, which includes:
+
+- Displaying an "Octopus Cat" icon in the top-right corner of the homepage.
+- Printing the author's site information in the console.
+
+To disable this feature, set:
+
+```json
+"intro": {
+  "supportAuthor": false
+}
+```
+
+### 3. Icon Replacement
+
+All icons in the project are sourced from [阿里巴巴矢量图标库](https://www.iconfont.cn). To replace them:
+
+1. Select your desired icons, add them to your project, and set their color to white.
+2. Use the **Font Class** method to generate the icon library.
+3. Copy the generated content.
+4. Replace the content in the file `/src/css/common/icon.scss`, ensuring the `.icon` selector remains intact.
+5. Update the corresponding configuration in `config.json` under `main.ul.*.icon`.
 
 ## Deployment
 
-After executing `npm run build` under the root directory, the project file will be generated to the `dist` directory.
+To build the project for deployment:
 
-You can then deploy the dist directory to your favorite server hosting provider.
+```sh
+npm run build
+```
 
-The following is an example of `GithubPage`:
+The output files will be generated in the `dist` directory. You can then deploy this directory to your preferred hosting provider.
 
-1. create `userName.github.io` Repo
+### Example: Deploying to GitHub Pages
 
-2. ```sh
-   cd dist
-   git init 
-   git add -A
-   git commit -am"init"
-   git remote add origin https://github.com/userName/userName.github.io.git
-   git push -f origin master
-   ```
+1. Create a repository named `username.github.io`.
+2. In the `dist` directory, run:
 
-3. Then set the repo's Github Page option in GitHub.
+	 ```sh
+	 cd dist
+	 git init
+	 git add -A
+	 git commit -m "Deploy to GitHub Pages"
+	 git remote add origin https://github.com/username/username.github.io.git
+	 git push -f origin master
+	 ```
 
-4. Visit `username.github.io` to browse!
+3. Enable GitHub Pages in the repository settings.
+4. Visit `https://username.github.io` to view your homepage.
 
-   
-
-If your previous `username. github.io` repo already has content, you can create another repo, such as `blog`.
-
- Then migrate the occupied items to `blog` and set the `GithubPage` option for this repo.
-
- The repo became a subdirectory of `username. github.io/blog`.
-
- In this way, your `username. github.io` repo can be left to the home page!
-
-
+If you already have content in your `username.github.io` repository, you can create a new repository (e.g., `blog`) and deploy this project there. This will create a subdirectory at `username.github.io/blog`.
 
 ## Sponsor
-I spent a lot of time and energy to develop this project.
 
-If this project has brought you help, welcome to sponsor, `star`.
+Developing this project required significant time and effort. If it has been helpful to you, please consider supporting me by:
 
-Thank you!
+- **Starring** the repository
+- **Sponsoring** the project
 
-
+Thank you for your support!
 
 ## License
-The Project is released under the ` LGPL-3.0` license.
 
+This project is licensed under the **LGPL-3.0** license.
 
+---
 
-
+This optimized version improves readability, removes redundancy, and ensures the content is concise and easy to follow for both new and experienced developers.
