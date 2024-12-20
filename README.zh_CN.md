@@ -1,5 +1,3 @@
----
-
 # 戒子 - HomePage
 
 [English Version](README.md)
