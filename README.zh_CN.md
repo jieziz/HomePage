@@ -1,4 +1,4 @@
-# Tomotoes-HomePage
+# 戒子-HomePage
 
 [English Version](<README.md>)
 
@@ -8,7 +8,7 @@
 
 > `戒子` 的主页
 
-[在线浏览](http://tomotoes.com)
+[在线浏览](http://jesz.org)
 
 酷炫的主页
 

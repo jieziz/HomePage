@@ -1,4 +1,4 @@
-# HomePage
+# jez-HomePage
 
 [中文版说明](<README.zh_CN.md>)
 
@@ -8,7 +8,7 @@
 
 > `戒子`  home page.
 
-[Online browsing](http://tomotoes.com)
+[Online browsing](http://jesz.org)
 
 Do you want to install such a cool homepage for your website?
 
@@ -26,7 +26,7 @@ Let's start now!
 ## Install
 
 ```sh
-git clone https://github.com/Tomotoes/HomePage.git
+git clone https://github.com/jieziz/HomePage.git
 cd HomePage
 npm install
 npm run dev
