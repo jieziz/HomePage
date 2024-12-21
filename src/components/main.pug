@@ -1,6 +1,8 @@
-.content.content-main
+- const backgroundStyle = main.backgroundImageUrl ? `background-image: url('${main.backgroundImageUrl}'); background-size: cover; background-position: center; background-repeat: no-repeat;` : 'background-color: black;'
+
+.content.content-main(style=backgroundStyle)
 	#card
-		.card-inner.fade(style=`background-image: url('${backgroundImageUrl}');`)
+		.card-inner.fade(style=`background-image: url('${main.card.backgroundImageUrl}');`)
 			header
 				img(src=`${main.avatar.link}` width=`${main.avatar.width}` height=`${main.avatar.height}` alt="avatar")
 				h1(data-translate="name") #{main.name}

@@ -14,7 +14,10 @@
 	"main": {
 		"name": "Jez",
 		"signature": "Code & Input & Output",
-		"backgroundImageUrl": "",
+		"backgroundImageUrl": "assets/background.jpg",
+		"card": {
+			"backgroundImageUrl": ""
+		},
 		"avatar": {
 			"link": "assets/avatar.jpg",
 			"height": "100",
